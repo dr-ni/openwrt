@@ -1,15 +1,21 @@
 ![OpenWrt logo](include/logo.png)
 
-OpenWrt Project is a Linux operating system targeting embedded devices. Instead
-of trying to create a single, static firmware, OpenWrt provides a fully
-writable filesystem with package management. This frees you from the
-application selection and configuration provided by the vendor and allows you
-to customize the device through the use of packages to suit any application.
-For developers, OpenWrt is the framework to build an application without having
-to build a complete firmware around it; for users this means the ability for
-full customization, to use the device in ways never envisioned.
+WRT3200ACM has switched to DSA, loosing the ability to configure
+the network switch from LiCI or use port mirroring. The physical ports
+are exposed as VLANs: lan1, lan2, lan3, lan4, and wan. Custom VLANs
+can be created, in an obfuscated way lan1.1, lan1.2, etc.
 
-Sunshine!
+Modifications:
+
+- wrt3200acm: reverted to network switch, instead of DSA
+Reverted the changes mentioned above. Two physical interfaces
+are exposed: lan, and wan with separate MAC addresses. The abilities to
+create custom VLANs, and mirror ports in LuCI is restored.
+
+-Disabled reporting of the hard-coded region in WRT3200ACM radios:
+mwifiex, mwlwifi in order to select own country
+
+-DFS free wireless-regdb
 
 ## Development
 
