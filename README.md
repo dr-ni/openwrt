@@ -31,6 +31,8 @@ subversion libz-dev libc-dev rsync
 
 ### Quickstart
 
+0. Checkout country_unlocked: git checkout country_unlocked
+
 1. Run `./scripts/feeds update -a` to obtain all the latest package definitions
    defined in feeds.conf / feeds.conf.default
 
