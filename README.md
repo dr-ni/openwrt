@@ -7,15 +7,14 @@ can be created, in an obfuscated way lan1.1, lan1.2, etc.
 
 Modifications:
 
-- wrt3200acm: reverted to network switch, instead of DSA
-Reverted the changes mentioned above. Two physical interfaces
+- Reverted the changes mentioned above. Two physical interfaces
 are exposed: lan, and wan with separate MAC addresses. The abilities to
 create custom VLANs, and mirror ports in LuCI is restored.
 
--Disabled reporting of the hard-coded region in WRT3200ACM radios:
+- Disabled reporting of the hard-coded region in WRT3200ACM radios:
 mwifiex, mwlwifi in order to select own country
 
--DFS free wireless-regdb
+- DFS free wireless-regdb
 
 ## Development
 
